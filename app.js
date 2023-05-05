@@ -11,11 +11,11 @@ app.set('view engine', 'ejs');
 app.listen(3000);
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { title: 'Home'});
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile('/about.html', { root: __dirname });
+    res.render('about', { title: 'About'});
 });
 
 // redirects
@@ -25,5 +25,5 @@ app.get('/about-us', (req, res) => {
 
 // 404
 app.use((req, res) => {
-    res.status(404).sendFile('/404.html', { root: __dirname })
+    res.status(404).render('404', { title: '404 Not Found'});
 })
