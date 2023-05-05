@@ -3,6 +3,8 @@ const express = require('express');
 // express app
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 // register view engine
 // !!! Next step
 app.set('view engine', 'ejs');
