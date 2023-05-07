@@ -20,7 +20,13 @@ app.use(morgan('dev'))
 app.use(express.static('public'));
 
 // mongoose and mongo sanbox routs
-app.get('/add-blog')
+app.get('/blogs', (req, res) => {
+    Blog.find()
+     .then((result) => {
+        res.render('blogs', { title: 'All Blogs', blogs: result})
+     })
+     .catch((err) =>)
+})
 
 app.get('/', (req, res) => {
     res.render('index', { title: 'Home'});
