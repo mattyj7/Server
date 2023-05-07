@@ -17,3 +17,4 @@ const blogSchema = new Schema({
 
 // create variable that stores the model of the collection blog (pluralises collection to blogs)
 const Blog = mongoose.model('Blog', blogSchema);
+module.exports = Blog;

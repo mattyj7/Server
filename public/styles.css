@@ -5,3 +5,10 @@ h1, h2, h3 {
 body {
     background-color: rgb(138, 138, 209);
 }
+
+.newblog {
+    background-color: rgb(138, 138, 209);
+    border-radius: 25px;
+    border: 1px solid white;
+    height: 25px;
+}

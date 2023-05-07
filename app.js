@@ -25,7 +25,9 @@ app.get('/blogs', (req, res) => {
      .then((result) => {
         res.render('blogs', { title: 'All Blogs', blogs: result})
      })
-     .catch((err) =>)
+     .catch((err) => {
+        console.log(err);
+     })
 })
 
 app.get('/', (req, res) => {
@@ -34,6 +36,10 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', { title: 'About'});
+});
+
+app.get('/new-blog', (req, res) => {
+    res.render('create', { title: 'Create'});
 });
 
 // redirects
