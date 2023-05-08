@@ -1,3 +1,7 @@
+body {
+    align-items: center;
+}
+
 h1, h2, h3 {
     color: black;
 }
@@ -6,9 +10,28 @@ body {
     background-color: rgb(138, 138, 209);
 }
 
+/* CREATE BLOG PAGE */
+.newblog-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 10px;
+}
+
 .newblog {
     background-color: rgb(138, 138, 209);
-    border-radius: 25px;
     border: 1px solid white;
     height: 25px;
+}
+
+.newblog-btn {
+    border: none;
+    padding: 5px 0px 5px 0px;
+    background-color: rgb(96, 192, 240);
+    width: 25%;
+    margin: 10px auto 0px auto;
+}
+
+.newblog-btn:hover {
+    border: 1px solid white;
 }
