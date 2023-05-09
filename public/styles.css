@@ -35,3 +35,18 @@ body {
 .newblog-btn:hover {
     border: 1px solid white;
 }
+
+.single {
+    display: block;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 6px solid rgb(4, 4, 149);
+}
+
+.title:hover {
+    color: rgb(4, 4, 149);
+}
+
+a {
+    text-decoration: none;
+}
