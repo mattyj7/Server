@@ -16,7 +16,8 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 app.set('view engine', 'ejs');
 
 //middleware
-app.use(morgan('dev'))
+app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true}));
 app.use(express.static('public'));
 
 // mongoose and mongo sanbox routs
@@ -28,6 +29,18 @@ app.get('/blogs', (req, res) => {
      .catch((err) => {
         console.log(err);
      })
+})
+
+app.post('/blogs', (req, res) => {
+    const blog = new Blog(req.body);
+
+    blog.save()
+        .then((result) => {
+            res.redirect('/blogs')
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 })
 
 app.get('/', (req, res) => {

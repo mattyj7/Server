@@ -4,13 +4,15 @@
 <body>
     <%- include('partials/nav.ejs')  %>
     <div class="newblog-container">
-        <label>Title</label>
-        <input type="text" class="newblog"></input>
-        <label>Snippet</label>
-        <input type="text" class="newblog"></input>
-        <label>Body</label>
-        <input type="text" class="newblog"></input>
-        <button class="newblog-btn">Submit</button>
+        <form action="/blogs" method="POST" class="newblog-form">
+            <label>Title</label>
+            <input type="text" class="newblog" name="title"></input>
+            <label>Snippet</label>
+            <input type="text" class="newblog" name="snippet"></input>
+            <label>Body</label>
+            <textarea type="text" class="newblog" name="body" required></textarea>
+            <button class="newblog-btn">Submit</button>
+        </form>
     </div>
 </body>
 </html>

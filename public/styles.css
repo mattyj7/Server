@@ -7,11 +7,11 @@ h1, h2, h3 {
 }
 
 body {
-    background-color: rgb(138, 138, 209);
+    background-color: rgb(151, 191, 191);
 }
 
 /* CREATE BLOG PAGE */
-.newblog-container {
+.newblog-form {
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -19,7 +19,7 @@ body {
 }
 
 .newblog {
-    background-color: rgb(138, 138, 209);
+    background-color: rgb(151, 191, 191);
     border: 1px solid white;
     height: 25px;
 }
@@ -27,7 +27,7 @@ body {
 .newblog-btn {
     border: none;
     padding: 5px 0px 5px 0px;
-    background-color: rgb(96, 192, 240);
+    background-color: rgb(96, 191, 191);
     width: 25%;
     margin: 10px auto 0px auto;
 }
